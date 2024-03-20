@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>this is home</h1>
+    <!-- <button><a [routerLink]="'courses'">click to go to course</a></button> -->
+    <!-- the above code is for relative routing -->
+    <button><a [routerLink]="'./courses'">click to go to course ./ acts an relative path</a></button>
+    <button><a [routerLink]="'/courses'">click to go to course absolute path</a></button>
+    <!-- the above code is for absolute routing meaning it will be appended to the localhost://4200 -->
+    <button><a [routerLink]="'hall'">click to go to hall</a></button>
+    <button><a [routerLink]="'gallery'">click to go to gallery</a></button>
+</div>
+

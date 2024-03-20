@@ -1,0 +1,27 @@
+<div class="table">
+     <h1>this is the detail of the course</h1>
+    <table>
+        <tr  >
+            <th>course Id</th>
+            <th>course Name</th>
+            <th>course Price</th>
+            <th>course duration</th>
+            <th>course description</th>
+        </tr>
+        <tr>
+            <td>{{mycourse?.courseId}}</td>
+            <td>{{mycourse?.courseName}}</td>
+            <td>{{mycourse?.coursePrice}}</td>
+            <td>{{mycourse?.courseDuration}}</td>
+            <td>{{mycourse?.description}}</td>
+            
+        </tr>
+    </table>
+    
+<button (click)="nextcourse()">next page</button>
+<button (click)="previouscourse()">previous page</button>
+ </div>
+
+ <button [routerLink]="'../../../courses'">click to go back</button>
+ <h1>this is was complete practice of router link reltive program</h1>
+

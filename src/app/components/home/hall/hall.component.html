@@ -1,0 +1,13 @@
+ <div>
+
+    <h1 class="hall">this is hall</h1>
+    <button  ><a  [routerLink]="'./master'">click to go to master using relative route </a></button>
+    <button  ><a  [routerLink]="'master'">click to go to master using relative route </a></button>
+    <h1>the above two buttons act same</h1>
+    <button ><a  [routerLink]="'/home/hall/master'" >click to go to master using absoluete routing</a></button>
+
+    <div>
+      <h1>this button will programmatically take you master room but using RELATIVETO:THIS.ACTIVATE ROUTE</h1>
+      <button (click)="gotomaster()">click here</button>
+    </div>
+ </div>

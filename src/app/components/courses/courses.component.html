@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>this is courses</h1>
+    <button (click)="gotohome()"> click the button to home programmatically </button>
+    <button (click)="gotohall()"> click the button to hall which is inside the home programmatically </button>
+    <button (click)="gotomaster()"> click the button to master which is inside HOME->HALL->MASTER the h programmatically </button>
+</div>
+
+<div class="coursetable">
+<h1 style="text-align: center;">All courses diplayed</h1>
+<hr>
+<table >
+ 
+<tr>
+    <th>id</th>
+    <th>Course Name</th>
+</tr>
+
+<tr style="padding: 10px; margin: 10px;" *ngFor="let item of mycourses"> 
+    <td style="padding: 10px; margin: 10px;">{{item.courseId}}</td>
+    <td style="padding: 10px; margin: 10px;">{{item.courseName}}</td>
+    <button [routerLink]="'details/'+item.courseId">click to see details</button>
+</tr>
+</table>
+</div>
