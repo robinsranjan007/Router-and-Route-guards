@@ -7,5 +7,7 @@
     <!-- the above code is for absolute routing meaning it will be appended to the localhost://4200 -->
     <button><a [routerLink]="'hall'">click to go to hall</a></button>
     <button><a [routerLink]="'gallery'">click to go to gallery</a></button>
+    <input type="text" style="border: 2px solid red; width: 200px;padding: 10px;" #coursename placeholder="search the course here">
+    <button (click)="searchcourse(coursename.value)">click here to search the course</button>
+    <button (click)="searchcourse(coursename.value)">click here to search the course</button>
 </div>
-

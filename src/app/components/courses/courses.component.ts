@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { courses } from 'src/app/shared/common';
 import { ServicesService } from 'src/app/shared/services.service';
 
@@ -10,14 +10,38 @@ import { ServicesService } from 'src/app/shared/services.service';
 })
 export class CoursesComponent implements OnInit {
 
-  constructor(private router:Router,private servicenow:ServicesService) { }
+  constructor(private router:Router,private servicenow:ServicesService,private routes:ActivatedRoute) { }
 
   mycourses!:courses[]
 
   ngOnInit(): void {
 
-    this.mycourses=this.servicenow.allcourses
+  
     console.log(this.mycourses,'this is all the courses')
+
+    // METHOD-1
+    // console.log(this.routes.snapshot.queryParams['name'],'this is query string') this is one way of fetching it
+    
+    //METHOD-2
+
+    // const names =this.routes.snapshot.queryParamMap.get('names')
+
+   let names:null|string=''
+
+  this.routes.queryParamMap.subscribe((val)=>{
+      names = val.get('names')
+    })
+
+    if(names== undefined||names==''||names == null )
+    {
+      this.mycourses=this.servicenow.allcourses
+    }
+    else{
+      this.mycourses= this.servicenow.allcourses.filter(val=>val.courseName.toLocaleLowerCase().includes(names!.toLocaleLowerCase()))
+    }
+    
+
+
   }
 
 gotohome()
