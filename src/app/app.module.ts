@@ -14,6 +14,7 @@ import { GallaryComponent } from './components/home/gallary/gallary.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailcourseComponent } from './components/courses/detailcourse/detailcourse.component';
+import { HttpClientModule} from '@angular/common/http'
 
 const routes:Routes=[
   {
@@ -75,7 +76,9 @@ const routes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
