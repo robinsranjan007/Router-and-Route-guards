@@ -11,7 +11,9 @@ import { HallComponent } from './components/home/hall/hall.component';
 import { MasterRoomComponent } from './components/home/hall/master-room/master-room.component';
 import { GallaryComponent } from './components/home/gallary/gallary.component';
 import { DetailcourseComponent } from './components/courses/detailcourse/detailcourse.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,12 +27,13 @@ import { HttpClientModule} from '@angular/common/http'
     HallComponent,
     MasterRoomComponent,
     GallaryComponent,
-    DetailcourseComponent
+    DetailcourseComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
+    ReactiveFormsModule,
     HttpClientModule
     
   ],

@@ -9,11 +9,12 @@ import { AboutComponent } from './components/about/about.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { DetailcourseComponent } from './components/courses/detailcourse/detailcourse.component';
 import { ErrorComponent } from './components/error/error.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LoginComponent,
   },
   {
     path: 'home',
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'courses',
     component: CoursesComponent,
+  },
+  {
+    path:'login',
+    component:LoginComponent
   },
   {
     path: 'courses/details/:id',

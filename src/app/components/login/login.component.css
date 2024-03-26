@@ -1,0 +1,31 @@
+.login{
+    border: 2px solid black;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px ;
+    margin: auto;
+}
+.form input{
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 3px 5px rgb(100, 94, 94);
+}
+
+.form button
+{
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 10px;
+    width: 92%;
+    margin-left: 10px;
+    box-shadow: 2px 3px 4px grey;
+    
+}

@@ -4,5 +4,7 @@
         <li><a [routerLink]="'/contact'"  [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact:true}"> CONTACT</a></li>
         <li><a [routerLink]="'/about'"  [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact:true}"> ABOUT</a></li>
         <li><a  [routerLink]="'/courses'"  [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact:true}"> COURSES</a></li>
+        <li><a  [routerLink]="'/login'"  [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact:true}"> sign Up</a></li>
+        <li><a [routerLink]="'/login'"  [queryParams]="{logout:true}">logout</a></li>
     </ul>
 </header>
