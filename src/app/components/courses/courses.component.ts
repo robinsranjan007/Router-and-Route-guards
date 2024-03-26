@@ -62,6 +62,11 @@ gotomaster()
   this.router.navigate(['home','hall','master'])
 }
 
+goingdetails(val:number)
+{
+  this.router.navigate(['courses','details',val])
+}
+
 
 }
 

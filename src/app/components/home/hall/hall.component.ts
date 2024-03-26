@@ -15,7 +15,7 @@ export class HallComponent implements OnInit {
 
   gotomaster()
   {
-    this.routes.navigate(['/master'],{relativeTo:this.activatedRoute})
+    this.routes.navigate(['master'],{relativeTo:this.activatedRoute})
   }
 
 }

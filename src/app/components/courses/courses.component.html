@@ -18,7 +18,9 @@
 <tr style="padding: 10px; margin: 10px;" *ngFor="let item of mycourses"> 
     <td style="padding: 10px; margin: 10px;">{{item.courseId}}</td>
     <td style="padding: 10px; margin: 10px;">{{item.courseName}}</td>
-    <button [routerLink]="'details/'+item.courseId">click to see details</button>
+    <button (click)="goingdetails(item.courseId)" [routerLink]="'/courses/details/'+item.courseId">click to see details</button>
+    <!-- <button  [routerLink]="'/courses/details/'+item.courseId">click to see details</button> -->
+    <!-- same same but diffelant -->
 </tr>
 </table>
 </div>

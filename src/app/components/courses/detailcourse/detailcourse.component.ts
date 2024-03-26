@@ -31,11 +31,15 @@ export class DetailcourseComponent implements OnInit {
     console.log(this.mycourse)
   }
 
-  nextcourse()
+  nextcourse(val:number|undefined)
   {
-    this.userID++;
-      this.router.navigate(['courses','details',this.userID])
-      this.mycourse=this.allcourses.find(item=>item.courseId== this.userID)
+    if(val)
+    {
+
+      val++;
+      this.router.navigate(['courses','details',val])
+      this.mycourse=this.allcourses.find(item=>item.courseId==  val)
+    }
   }
 
   previouscourse()
