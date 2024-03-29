@@ -10,6 +10,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { DetailcourseComponent } from './components/courses/detailcourse/detailcourse.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from './components/login/login.component';
+import { GuradService } from './components/gurad.service';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
+    canActivateChild:[GuradService],
     children: [
       {
         path: 'hall',

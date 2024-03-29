@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       username:new FormControl(null,[Validators.required]),
       password:new FormControl(null,[Validators.required])
     })
+    
 const logoutval=this.activeroute.queryParamMap.subscribe((val)=>{
   const logout=Boolean(val.get('logout'))
   
@@ -44,6 +45,7 @@ console.log(logoutval,'this is logoutval')
   
     this.username=this.loginform.value.username
     this.password =this.loginform.get('password')?.value
+    console.log(this.loginform.valueChanges,this.loginform,this.loginform.get('username'),this.password,'two ways of getting values')
 
     const user=this.authservice.loginuser(this.username,this.password)
      

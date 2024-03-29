@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { users } from './common';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
- constructor() { }
+ constructor(private route:Router) { }
 
  myusers:users[]=[
   {id:1,name:'robins ranjan', username:'rr',password:1234},
@@ -17,13 +18,14 @@ export class AuthService {
 islogged:boolean=false;
 
 
-loginuser(username:string,password:number)
+loginuser(username:string,password:number,)
 {
   let user=this.myusers.find(val=>val.username == username && val.password == password)
   
 if(user==undefined)
 {
   this.islogged=false;
+  this.route.navigate(['login'])
 }
 else
 {
